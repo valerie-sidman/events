@@ -1,3 +1,5 @@
+import goblinImg from '../img/goblin.png';
+
 export default class GamePlay {
   constructor() {
     this.hitsNumber = document.querySelector('.number-hits');
@@ -9,7 +11,7 @@ export default class GamePlay {
   init() {
     this.cellsArray = Array.from(this.cellsArray);
     const image = document.createElement('img');
-    image.src = './img/goblin.png';
+    image.src = goblinImg;
     let randomIndex;
     setInterval(() => {
       const randomNumber = GamePlay.getRandomInt(0, (this.cellsArray.length - 1));
