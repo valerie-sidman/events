@@ -11,16 +11,14 @@ export default class GameController {
         event.preventDefault();
         const imgInCell = cell.querySelector('img');
         if (imgInCell) {
-          this.gamePlay.hitsNumber.innerText = Number
-            .parseInt(this.gamePlay.hitsNumber.innerText, 10) + 1;
+          this.gamePlay.setHitsNumber(Number.parseInt(this.gamePlay.getHitsHumber(), 10) + 1);
           imgInCell.remove();
         } else {
-          this.gamePlay.missNumber.innerText = Number
-            .parseInt(this.gamePlay.missNumber.innerText, 10) + 1;
-          if (this.gamePlay.missNumber.innerText === '6') {
+          this.gamePlay.setMissNumber(Number.parseInt(this.gamePlay.getMissNumber(), 10) + 1);
+          if (this.gamePlay.getMissNumber() === '6') {
             alert('GAME OVER');
-            this.gamePlay.hitsNumber.innerText = '0';
-            this.gamePlay.missNumber.innerText = '0';
+            this.gamePlay.setHitsNumber('0');
+            this.gamePlay.setMissNumber('0');
           }
         }
       });

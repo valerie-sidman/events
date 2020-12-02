@@ -26,6 +26,22 @@ export default class GamePlay {
     }, 1000);
   }
 
+  setHitsNumber(number) {
+    this.hitsNumber.innerText = number;
+  }
+
+  getHitsHumber() {
+    return this.hitsNumber.innerText;
+  }
+
+  setMissNumber(number) {
+    this.missNumber.innerText = number;
+  }
+
+  getMissNumber() {
+    return this.missNumber.innerText;
+  }
+
   static getRandomInt(min, max) {
     const min0 = Math.ceil(min);
     const max0 = Math.floor(max);
